@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="71px" height="61px" viewBox="0 0 71 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>”</title>
+    <defs>
+        <path d="M25.5126953,127.544922 L43.3349609,67.8525391 L21.1181641,67.8525391 L10.3759766,127.544922 L25.5126953,127.544922 Z M62.7441406,127.544922 L80.5664062,67.8525391 L58.3496094,67.8525391 L47.6074219,127.544922 L62.7441406,127.544922 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atoms/3.Graphics/Quotemarks" transform="translate(-10.000000, -67.000000)" fill-rule="nonzero">
+            <g id="”">
+                <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                <use fill="#FFC627" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

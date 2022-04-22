@@ -1,0 +1,55 @@
+.tray--prefooter--cta {
+    padding: 120px 0;
+    text-align: center;
+
+    .header {
+        h2,
+        .h2 {
+            margin-bottom: 32px;
+        }
+    }
+
+    .text-block {
+        margin-bottom: 32px;
+
+        p:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+
+    .button-row {
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .button {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    + footer {
+        margin-top: 30px;
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--prefooter--cta {
+        .button-row {
+            flex-wrap: no-wrap;
+            justify-content: center;
+
+            .button {
+                width: auto;
+                margin-right: 15px;
+                margin-bottom: 0;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+} //== LG Break ---------------------

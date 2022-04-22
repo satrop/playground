@@ -1,0 +1,14 @@
+.tray-flush {
+    &--top {
+        padding-top: 0;
+    }
+
+    &--bottom {
+        padding-bottom: 0;
+    }
+
+    &--top-n-bottom {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

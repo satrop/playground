@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4px" height="7px" viewBox="0 0 4 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape</title>
+    <defs>
+        <path d="M8.42124792,3.26410382 C8.52576748,3.39293552 8.52619104,3.60656783 8.42286153,3.73419007 L5.94681251,6.89961253 C5.84599108,7.03329766 5.67909377,7.03329767 5.57529557,6.90059874 C5.47467042,6.77225617 5.47507967,6.55770794 5.57615736,6.42398567 L7.66107589,3.7636019 L7.85486363,3.49998945 L7.66262525,3.23833463 L5.57529557,0.569807141 C5.47490914,0.441769039 5.47490914,0.227741013 5.57524959,0.0994626418 C5.67897576,-0.0331441409 5.84537081,-0.0332986291 5.94641548,0.0998658428 L8.42124792,3.26410382 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atoms/2.Icons/Nav/Caret/W-Copy" transform="translate(-5.000000, 0.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Shape" fill="#333333" transform="translate(7.000000, 3.500000) scale(-1, 1) translate(-7.000000, -3.500000) " xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

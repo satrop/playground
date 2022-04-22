@@ -1,0 +1,72 @@
+.tray--hero {
+    &--landing-n-section-page {
+        padding-top: 41px;
+        margin-bottom: 30px;
+
+        .tray--hero__background {
+            min-height: 425px;
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .hero-borders {
+            &::before {
+                border-width: 41px 0 0 0;
+                width: 80%;
+                top: -41px;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--hero {
+        &--landing-n-section-page {
+            padding-top: 41px;
+
+            .tray--hero__background {
+                min-height: 595px;
+                width: calc(100% - 82px);
+                margin-left: 41px;
+            }
+
+            .hero-borders {
+                &::before {
+                    height: 506px;
+                    left: -41px;
+                    max-width: 1240px;
+                    border-width: 41px 0 0 41px;
+                }
+
+                &::after {
+                    display: block;
+                    border-width: 0 41px 0 0;
+                    height: 241px;
+                }
+            }
+        }
+    }
+} //== LG Break ---------------------
+
+@include xl {
+    .tray--hero {
+        &--landing-n-section-page {
+            .hero-borders {
+                &::before {
+                    max-width: unset;
+                    width: 90%;
+                }
+
+                &::after {
+                    height: 300px;
+                }
+            }
+        }
+    }
+} //== XL Break ---------------------

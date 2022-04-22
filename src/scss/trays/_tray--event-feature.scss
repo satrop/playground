@@ -1,0 +1,115 @@
+.tray--event-feature {
+    padding-top: 41px;
+    padding-bottom: 41px;
+
+    .link {
+        margin-top: 30px;
+    }
+
+    .date-block {
+        @include toRem(font-size, 40);
+        @include toRem(line-height, 60);
+        text-transform: uppercase;
+        padding-left: 30px;
+        padding-right: 30px;
+        position: absolute;
+        z-index: 2;
+        color: $white;
+        background-color: $navy;
+        font-family: "Vito-Bold";
+        transform: rotate(-90deg);
+        transform-origin: bottom right;
+        right: -1px;
+        top: 21px;
+    }
+
+    &__image {
+        width: calc(100% + 35px);
+        margin-left: -35px;
+        max-width: 570px;
+        min-height: 498px;
+        position: relative;
+        overlow: hidden;
+
+        img {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .text-block {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 80px;
+        padding-bottom: 40px;
+        border: solid 2px $light-blue;
+        margin-top: -26px;
+        position: relative;
+        z-index: 3;
+
+        &_eyebrow {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-bottom: 44px;
+        }
+
+        p {
+            &:last-of-type {
+                margin-bottom: 48px;
+            }
+        }
+    }
+
+    &[class^="background-color--"]:not(.background-color--navy),
+    &[class*="background-color--"]:not(.background-color--navy) {
+        .text-block {
+            border-color: $light-blue;
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--event-feature {
+        &__image {
+            margin-left: 0;
+        }
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .date-block {
+            padding: 30px 30px 40px 30px;
+            top: -38px;
+        }
+
+        .text-block {
+            padding-left: 200px;
+            margin-top: unset;
+            margin-left: -140px;
+            padding-right: 80px;
+            padding-top: 43px;
+
+            &_eyebrow {
+                margin-bottom: 23px;
+            }
+
+            h2 {
+                margin-bottom: 32px;
+            }
+
+            p {
+                &:last-of-type {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+} //== LG Break ---------------------

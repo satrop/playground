@@ -1,0 +1,138 @@
+.tray--content--signature {
+    position: relative;
+    overflow: hidden;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        width: calc(100% + 23%);
+        margin-left: -11.5%;
+        padding: 0 11.5% 125px 11.5%;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 65%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__text-left {
+        width: calc(100% + 23%);
+        margin-left: -11.5%;
+        padding: 97px 11.5% 125px 11.5%;
+    }
+
+    &__text-block-wrapper {
+        position: relative;
+    }
+
+    &__text-block {
+        background-color: $white;
+        position: relative;
+        z-index: 1;
+        padding: 82px 11.5%;
+
+        &_icon {
+            position: absolute;
+            background-color: $prime-blue;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            top: -65px;
+
+            svg {
+                fill: $light-blue;
+            }
+        }
+
+        .button {
+            margin-top: 45px;
+        }
+    }
+
+    .overlay-lines {
+        background-image: url("../img/wavy--lg--white.svg");
+        background-position: center;
+        background-size: fill;
+        background-repeat: repeat;
+        height: 100%;
+        position: absolute;
+        width: calc(100% + 23%);
+        top: 35%;
+        left: -11.5%;
+        opacity: 0.35;
+        pointer-events: none;
+        z-index: 0;
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--content--signature {
+        &__wrapper {
+            flex-direction: row;
+            width: calc(100% + 200px);
+            margin-left: -100px;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        &__image {
+            width: 65%;
+            height: 100%;
+        }
+
+        &__text-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            height: 100%;
+            padding-right: 20%;
+            padding-left: 180px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        &__text-block-wrapper {
+            width: 50%;
+            margin-left: -10%;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        &__text-block {
+            width: calc(100% - 100px);
+            padding: 80px 90px;
+
+            &_icon {
+                top: 0;
+                left: -65px;
+            }
+        }
+
+        .overlay-lines {
+            background-position: center;
+            background-size: cover;
+            top: 0;
+            left: 55%;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+} //== LG Break ---------------------

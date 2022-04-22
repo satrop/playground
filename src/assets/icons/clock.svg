@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Atoms/2.Icons/Nav/clock</title>
+    <g id="Right-Column-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Right-Column-Components-Update" transform="translate(-935.000000, -2966.000000)" fill-rule="nonzero">
+            <g id="icon-clock" transform="translate(935.000000, 2966.000000)">
+                <path d="M16.0504732,2.01892744 C23.7223975,2.01892744 30.0820189,8.27760252 30.0820189,16.0504732 C30.0820189,23.8233438 23.7223975,29.9810726 16.0504732,29.9810726 C8.3785489,29.9810726 2.01892744,23.7223975 2.01892744,15.9495268 C2.01892744,8.17665615 8.27760252,2.01892744 16.0504732,2.01892744 M16.0504732,0 C7.16719243,0 0,7.16719243 0,15.9495268 C0,24.7318612 7.16719243,32 16.0504732,32 C24.9337539,32 32,24.8328076 32,15.9495268 C32,7.06624606 24.8328076,0 16.0504732,0 Z" id="Shape" fill="#000000"></path>
+                <polyline id="Path" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="16.0504732 4.64353312 16.0504732 17.0928811 20.6940063 10.9022082"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,95 @@
+.modal-fade {
+    @extend %anim;
+    background-color: rgba($black, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+        z-index: 1400;
+    }
+}
+
+.modal {
+    @extend %anim;
+    position: fixed;
+    top: calc(50% - 30px);
+    left: 50%;
+    margin-top: 0px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background-color: #fff;
+
+    width: 90%;
+    max-width: 800px;
+    max-height: calc(100% - 80px);
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+
+    .button + .button {
+        margin-top: 0;
+    }
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+        top: 50%;
+        max-height: calc(100vh - 210px);
+        z-index: 1600;
+    }
+
+    button {
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        color: #fff;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+
+        svg {
+            fill: $prime-blue;
+        }
+    }
+
+    &__body {
+        @include push--auto;
+        padding: 30px 0;
+        width: 80%;
+        overflow-y: auto;
+        max-height: calc(100vh - 335px);
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        p:last-of-type {
+            padding-bottom: 0;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .modal {
+        &__body {
+            @include push--auto;
+            padding: 40px 0;
+            width: 70%;
+        }
+    }
+} //== LG Break ---------------------

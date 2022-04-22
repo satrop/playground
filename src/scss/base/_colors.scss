@@ -1,0 +1,118 @@
+//==== Primary Colors -----------------
+$prime-blue: #002868 !default;
+
+//==== Secondary Colors ---------------
+$navy: #010e30 !default;
+$yellow: #ffc627 !default;
+
+//==== Tertiary Colors ----------------
+$white: #fff !default;
+$black: #333 !default;
+$light-blue: #6cb2e2 !default;
+$cool-grey: #eff2f9 !default;
+
+$border-color: #010101;
+$border-color--light: #979797;
+
+//==== Background Colors --------------
+.background-color {
+    //== Prime ------------------------
+    &--prime-blue {
+        background-color: $prime-blue;
+        color: $white;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        a {
+            color: $white;
+        }
+    }
+
+    //== Secondary --------------------
+    &--navy {
+        background-color: $navy;
+        color: $white;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        a {
+            color: $white;
+        }
+    }
+
+    &--yellow {
+        background-color: $yellow;
+        color: $black;
+    }
+
+    //=== Tertiary --------------------
+    &--white {
+        background-color: $white;
+        color: $black;
+    }
+
+    &--black {
+        background-color: $black;
+        color: $white;
+    }
+
+    &--light-blue {
+        background-color: $light-blue;
+        color: $black;
+    }
+
+    &--cool-grey {
+        background-color: $cool-grey;
+        color: $black;
+    }
+}
+
+//==== Text Colors --------------------
+.text-color {
+    //== Prime ------------------------
+    &--prime-blue {
+        color: $prime-blue;
+    }
+
+    //== Secondary --------------------
+    &--navy {
+        color: $navy;
+    }
+
+    &--yellow {
+        color: $yellow;
+    }
+
+    //=== Tertiary --------------------
+    &--white {
+        color: $white;
+    }
+
+    &--black {
+        color: $black;
+    }
+
+    &--light-blue {
+        color: $light-blue;
+    }
+
+    &--cool-grey {
+        color: $cool-grey;
+    }
+}

@@ -1,0 +1,98 @@
+.tray--prefooter--form-cta {
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    .header {
+        margin-bottom: 72px;
+    }
+
+    address {
+        font-style: normal;
+
+        .contact {
+            margin-bottom: 32px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &__header {
+                font-family: "Vito-Bold";
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-bottom: 8px;
+                @include toRem(font-size, 16);
+            }
+
+            a {
+                &[href^="mailto:"] {
+                    display: block;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+    .prefooter--form-cta--left {
+        padding-bottom: 64px;
+        max-width: 250px;
+    }
+
+    .prefooter--form-cta--right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 64px;
+        padding-bottom: 80px;
+    }
+
+    .form-header {
+        display: block;
+        width: 100%;
+        margin-bottom: 24px;
+
+        h3,
+        .h3 {
+            margin-bottom: 8px;
+        }
+
+        .text-block {
+            margin-bottom: 24px;
+        }
+    }
+
+    form {
+        width: calc(100% + 5px);
+        margin-left: -2.5px;
+        padding-left: 8.33333333%;
+        padding-right: 8.33333333%;
+    }
+
+    + footer {
+        margin-top: 30px;
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--prefooter--form-cta {
+        padding: 120px 0;
+
+        .header {
+            margin-top: 6px;
+        }
+
+        .form-wrapper {
+            padding-top: 90px;
+            padding-bottom: 110px;
+        }
+        form {
+            margin-left: 0;
+            max-width: 470px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+} //== LG Break ---------------------

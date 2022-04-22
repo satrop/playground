@@ -1,0 +1,36 @@
+.announcement {
+    padding: 40px;
+    border-radius: 4px;
+
+    &__header {
+        margin-bottom: 24px;
+    }
+
+    h2,
+    .h2 {
+        @include toRem(font-size, 30);
+    }
+
+    p {
+        @include toRem(font-size, 18);
+
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+
+    .button {
+        margin-top: 48px;
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .announcement {
+        h2,
+        .h2 {
+            font-size: 2.5rem;
+        }
+    }
+} //== LG Break ---------------------

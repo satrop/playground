@@ -1,0 +1,50 @@
+.tray--hero {
+    &--home-page {
+        padding-top: 30px;
+        .tray--hero__background {
+            min-height: 442px;
+        }
+
+        .hero-borders {
+            &::before {
+                height: 338px;
+                top: -30px;
+            }
+        }
+    }
+
+    .container {
+        pointer-events: none;
+
+        .col-10 {
+            pointer-events: auto;
+        }
+    }
+
+    .video--container {
+        border-radius: 0;
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--hero {
+        &--home-page {
+            padding-top: 41px;
+            .tray--hero__background {
+                min-height: 759px;
+            }
+
+            .hero-borders {
+                &::before {
+                    height: 646px;
+                }
+
+                &::after {
+                    height: 382px;
+                }
+            }
+        }
+    }
+} //== XL Break ---------------------

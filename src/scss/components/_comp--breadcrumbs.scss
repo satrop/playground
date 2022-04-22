@@ -1,0 +1,164 @@
+.breadcrumbs {
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        li {
+            @include toRem(font-size, 14);
+            text-align: left;
+            align-items: center;
+            display: none;
+
+            &:first-of-type {
+                display: flex;
+            }
+
+            a {
+                display: block;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            &:first-of-type {
+                a {
+                    padding-left: 0;
+                }
+            }
+
+            &:last-of-type {
+                &::after {
+                    display: none;
+                }
+            }
+
+            button {
+                @extend %anim;
+                background-color: transparent;
+                cursor: pointer;
+
+                &:hover,
+                &:focus {
+                    color: $yellow;
+                }
+            }
+
+            &::before {
+                margin-top: 5px;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                content: "";
+                background-image: url("../icons/caret-w.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 5px;
+                height: 7px;
+                margin-left: -10px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .more-links {
+        position: absolute;
+        z-index: 100;
+        margin-left: 47px;
+        display: none;
+
+        &--wrapper {
+            padding: 20px;
+
+            ul {
+                flex-direction: column;
+                width: 100%;
+                padding-top: 20px;
+
+                li {
+                    display: block;
+                    text-align: left;
+                    align-self: flex-start;
+
+                    a {
+                        color: $white;
+                        padding: 0;
+                        position: relative;
+
+                        &::after {
+                            @extend %anim;
+                            content: "";
+                            position: absolute;
+                            bottom: -4px;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: rgba($white, 0);
+                        }
+
+                        &:hover,
+                        &:focus {
+                            color: $white;
+
+                            &::after {
+                                background-color: rgba($white, 1);
+                                bottom: -0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tray--breadcrumb-inline-nav-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .breadcrumbs {
+        margin-bottom: 30px;
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .breadcrumbs {
+        ul {
+            li {
+                display: flex;
+
+                &::after {
+                    margin-top: 5px;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    content: "";
+                    background-image: url("../icons/caret-e.svg");
+                    width: 5px;
+                    height: 7px;
+                }
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .tray--breadcrumb-inline-nav-wrapper {
+        flex-direction: row;
+        align-items: center;
+
+        .breadcrumbs {
+            margin-left: 30px;
+            margin-bottom: 0;
+
+            li {
+                margin-bottom: 0;
+            }
+        }
+    }
+} //== LG Break ---------------------

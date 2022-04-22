@@ -1,0 +1,100 @@
+.tray--stats {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url("../img/wavy--xxl.svg");
+    background-size: auto;
+    background-position: center;
+
+    &__header {
+        @include toRem(font-size, 40);
+        @include toRem(line-height, 44);
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 62px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .stat {
+            width: 100%;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: 75px;
+
+            &__number {
+                @include toRem(font-size, 60);
+                @include toRem(line-height, 60);
+                font-family: "Vito-Bold";
+                color: $yellow;
+                margin-bottom: 24px;
+            }
+
+            &__text {
+                @include toRem(font-size, 18);
+                @include toRem(line-height, 24);
+            }
+        }
+    }
+
+    .center-item {
+        margin-bottom: 60px;
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--stats {
+        padding-top: 143px;
+        padding-bottom: 203px;
+
+        &__header {
+            padding-left: 70px;
+            padding-right: 70px;
+            letter-spacing: -1px;
+        }
+
+        &__wrapper {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+
+            .stat {
+                width: 33.3333%;
+                padding-left: 70px;
+                padding-right: 70px;
+                margin-bottom: 0;
+
+                &__header {
+                    @include toRem(font-size, 60);
+                    @include toRem(line-height, 70);
+                }
+
+                &__number {
+                    @include toRem(font-size, 80);
+                    @include toRem(line-height, 100);
+                    margin-bottom: 30px;
+                }
+
+                &__text {
+                    @include toRem(font-size, 24);
+                    @include toRem(line-height, 32);
+                }
+            }
+
+            &.has-4 {
+                .stat {
+                    width: 25%;
+                }
+            }
+        }
+    }
+} //== LG Break ---------------------

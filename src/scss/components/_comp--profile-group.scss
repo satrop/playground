@@ -1,0 +1,31 @@
+.tray--profile-group {
+    .card-list {
+        .card {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                margin-bottom: 8px;
+            }
+
+            &__title {
+                @include toRem(font-size, 16);
+                font-family: "Vito-Bold";
+                text-transform: uppercase;
+                margin-bottom: 16px;
+            }
+
+            .text-block {
+                margin-bottom: 0;
+                padding-bottom: 10px;
+            }
+
+            .link {
+                //margin-top: auto;
+                margin-right: auto;
+                width: auto;
+                //display: inline-flex;
+            }
+        }
+    }
+}

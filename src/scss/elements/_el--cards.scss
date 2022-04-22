@@ -1,0 +1,106 @@
+.card {
+    @extend %anim;
+    flex: 1 1 100%;
+    margin-bottom: 60px;
+
+    &__date {
+        @include toRem(font-size, 40);
+        //@include toRem(line-height, 60);
+        font-family: "Vito-Bold";
+        margin-bottom: 27px;
+    }
+
+    &__time,
+    &__location {
+        text-transform: uppercase;
+        font-family: "Vito-Bold";
+    }
+
+    &__time {
+        margin-top: -20px;
+    }
+
+    &__location {
+        margin-bottom: 27px;
+    }
+
+    &__text {
+        @include toRem(font-size, 24);
+        @include toRem(line-height, 32);
+        font-family: "Lora", serif;
+        margin-bottom: 45px;
+        font-weight: 500;
+    }
+
+    &__image-wrapper {
+        margin-bottom: 24px;
+    }
+} //==== Card ---------------------
+
+.card--date {
+    border: solid 2px $prime-blue;
+    padding: 30px;
+    min-height: 288px;
+}
+
+a.card--date {
+    &:hover {
+        border-color: $yellow;
+        color: unset;
+
+        .link {
+            color: $black;
+
+            &::after {
+                background-color: $yellow;
+                height: 2px;
+                transform: translate3d(0, -0.1em, 0);
+            }
+        }
+    }
+} //==== Card Data As A-Tag ------------
+
+[class^="background-color--"]:not(.background-color--white),
+[class*="background-color--"]:not(.background-color--white) {
+    .card--date {
+        border-color: $light-blue;
+    }
+
+    a.card--date {
+        &:hover {
+            border-color: $yellow;
+            color: unset;
+
+            .link {
+                color: $white;
+            }
+        }
+    }
+}
+
+.card--story {
+    padding: 0;
+    border: 0;
+
+    .link {
+        margin-top: 24px;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .card {
+        flex: 0 1 calc(33.333333% - 60px);
+        margin-left: 30px;
+        margin-right: 30px;
+
+        &:nth-child(3n) {
+            margin-bottom: 60px;
+        }
+    } //==== Card Date ---------------------
+} //== LG Break ---------------------

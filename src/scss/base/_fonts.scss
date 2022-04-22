@@ -1,0 +1,275 @@
+@font-face {
+    font-family: "icomoon";
+    src: url("../../fonts/icons/icomoon.eot");
+    src: url("../../fonts/icons/icomoon.eot#iefix") format("embedded-opentype"),
+        url("../../fonts/icons/icomoon.ttf") format("truetype"),
+        url("../../fonts/icons/icomoon.woff") format("woff"),
+        url("../../fonts/icons/icomoon.svg#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.icon-e-chevron:before {
+    content: "\e900";
+}
+.icon-w-chevron:before {
+    content: "\e901";
+}
+
+@import url("//fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+@font-face {
+    font-family: "Vito-Regular";
+    font-display: swap;
+    src: url("../../fonts/vito/Vito-Regular.woff") format("woff"),
+        url("../../fonts/vito/Vito-Regular.woff2") format("woff2"),
+        url("../../fonts/vito/Vito-Regular.eot") format("opentype");
+}
+
+@font-face {
+    font-family: "Vito-Medium";
+    font-display: swap;
+    src: url("../../fonts/vito/Vito-Medium.woff") format("woff"),
+        url("../../fonts/vito/Vito-Medium.woff2") format("woff2"),
+        url("../../fonts/vito/Vito-Medium.eot") format("opentype");
+}
+
+@font-face {
+    font-family: "Vito-Bold";
+    font-display: swap;
+    src: url("../../fonts/vito/Vito-Bold.woff") format("woff"),
+        url("../../fonts/vito/Vito-Bold.woff2") format("woff2"),
+        url("../../fonts/vito/Vito-Bold.eot") format("opentype");
+}
+
+@mixin lora {
+    font-family: "Lora", serif;
+}
+
+body {
+    color: $black;
+    font-weight: 400;
+    @include toRem(font-size, 18);
+    @include toRem(line-height, 24);
+    font-family: "Vito-Regular";
+
+    b {
+        font-family: "Vito-Bold";
+        font-weight: normal;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    @include lora;
+    margin-bottom: 8px;
+}
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+    font-weight: 500;
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+    font-weight: 700;
+}
+
+h1,
+.h1 {
+    @include toRem(font-size, 40);
+    @include toRem(line-height, 44);
+    letter-spacing: -0.075rem;
+}
+
+h2,
+.h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: -0.075rem;
+}
+
+h3,
+.h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h4,
+.h4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+
+h5,
+.h5 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-style: italic;
+}
+
+h6,
+.h6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.text {
+    &--lg {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    &--md {
+        font-size: 1.125rem;
+    }
+
+    &--sm {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+.lead {
+    margin-bottom: 48px;
+}
+
+section {
+    margin-bottom: 48px;
+}
+
+p {
+    padding-bottom: 24px;
+
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul,
+ol {
+    margin-bottom: 24px;
+
+    li {
+        margin-bottom: 8px;
+    }
+}
+
+.quote-wrapper {
+    padding-left: 64px;
+    position: relative;
+    display: block;
+
+    &--pull-quote {
+        padding-left: 40px;
+
+        &::before {
+            @include pseudo;
+            width: 4px;
+            height: 100%;
+            background-color: $yellow;
+            left: 10px;
+        }
+    }
+}
+
+q,
+blockquote {
+    @include lora;
+    font-style: italic;
+    display: block;
+}
+
+blockquote {
+    font-style: normal;
+    font-weight: 700;
+}
+
+cite {
+    display: block;
+    margin-top: 16px;
+    font-style: normal;
+    color: rgba($black, 0.5);
+    font-size: 1rem;
+}
+
+.text-block_eyebrow {
+    @include toRem(font-size, 16);
+    @include toRem(line-height, 18);
+    font-family: "Vito-Bold";
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    letter-spacing: 0.05rem;
+}
+
+.quote-icon {
+    font-family: "Lora", serif;
+    quotes: "”";
+    font-size: 18rem;
+    line-height: 1.2;
+    color: $yellow;
+    pointer-events: none;
+
+    &::before {
+        @include center;
+        content: open-quote;
+        font-size: 0;
+    }
+
+    &::after {
+        @include center;
+        content: close-quote;
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    h1,
+    .h1 {
+        @include toRem(font-size, 60);
+        @include toRem(line-height, 72);
+    }
+
+    .quote-wrapper {
+        padding-left: 64px;
+
+        &--pull-quote {
+            padding-left: 96px;
+
+            &::before {
+                left: 64px;
+            }
+        }
+    }
+} //== LG Break ---------------------

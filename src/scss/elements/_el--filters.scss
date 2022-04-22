@@ -1,0 +1,103 @@
+.tray--filters {
+    margin-bottom: 30px;
+
+    &__wrapper {
+        padding: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        .form--title {
+            font-family: "Vito-Bold";
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        > div {
+            margin-right: 20px;
+
+            &:last-of-type {
+                label {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .form-element {
+            width: 100%;
+
+            .custom-select,
+            .custom-select-wrapper,
+            .custom-select-trigger {
+                height: 50px;
+            }
+
+            &--search {
+                padding: 0;
+
+                input,
+                label {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.tray--sort__wrapper {
+    display: flex;
+    border-bottom: 2px solid $navy;
+    padding-bottom: 10px;
+
+    button {
+        margin-left: auto;
+        display: flex;
+        background-color: transparent;
+        position: relative;
+        align-items: center;
+        cursor: pointer;
+        color: $black;
+
+        img {
+            margin-right: 10px;
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--filters {
+        form {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            > div {
+                margin-right: 20px;
+
+                &:last-of-type {
+                    label {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .form--title {
+                margin-bottom: 0;
+            }
+
+            .form-element {
+                margin-bottom: 0;
+                flex: 1 1 50%;
+
+                &--search {
+                    flex-basis: 100%;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+} //== LG Break ---------------------

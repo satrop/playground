@@ -1,0 +1,98 @@
+.event-row {
+    padding-top: 43px;
+    padding-bottom: 80px;
+
+    &__header,
+    &__body,
+    &__footer {
+        display: flex;
+    }
+
+    &__header {
+        flex-direction: column;
+
+        .line {
+            margin-top: 27px;
+            margin-bottom: 48px;
+            width: 100%;
+            height: 1px;
+            background-color: $black;
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    &__body {
+        flex-direction: column;
+
+        .card--date {
+            &.hide {
+                display: none;
+            }
+        }
+    }
+
+    &__footer {
+        justify-content: center;
+    }
+}
+
+[class^="background-color--"]:not(.background-color--white),
+[class*="background-color--"]:not(.background-color--white) {
+    .event-row {
+        &__header {
+            .line {
+                background-color: $white;
+            }
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .event-row {
+        padding-top: 80px;
+
+        &__header,
+        &__body {
+            flex-direction: row;
+        }
+
+        &__header {
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 80px;
+
+            button {
+                display: block;
+            }
+
+            .title {
+                flex: 1 0 auto;
+            }
+
+            .button {
+                flex: 1 0 auto;
+            }
+
+            .line {
+                flex: 1 1 100%;
+                margin: 0 30px;
+            }
+        }
+
+        &__body {
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            width: calc(100% + 60px);
+            margin-left: -30px;
+        }
+
+        &__footer {
+            display: none;
+        }
+    }
+} //== LG Break ---------------------

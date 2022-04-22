@@ -1,0 +1,100 @@
+table,
+thead,
+tbody,
+th,
+td,
+tr {
+    display: block;
+}
+
+table {
+    border: solid 1px #5b616b;
+    border-collapse: collapse;
+}
+
+thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+tr {
+    min-height: 42px;
+}
+
+tbody {
+    tr:nth-child(odd) {
+        background: $prime-blue;
+        color: $white;
+    }
+}
+
+td {
+    border: none;
+    border-bottom: 1px solid #5b616b;
+    border-right: 1px solid #5b616b;
+    position: relative;
+    display: flex;
+    padding: 10px 20px;
+
+    .mobile-colum-header,
+    span {
+        flex: 1 1 50%;
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    table {
+        display: table;
+
+        thead {
+            display: table-header-group;
+            color: $white;
+            min-height: 40px;
+            text-align: left;
+
+            tr {
+                background-color: $prime-blue;
+                position: unset;
+                top: unset;
+                left: unset;
+
+                th {
+                    padding: 10px 0 10px 20px;
+                }
+            }
+        }
+
+        tr {
+            display: table-row;
+        }
+
+        th,
+        td {
+            display: table-cell;
+        }
+
+        tbody {
+            display: table-row-group;
+
+            tr:nth-child(odd) {
+                background-color: $white;
+                color: $black;
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        display: table-cell;
+
+        .mobile-colum-header {
+            display: none;
+        }
+    }
+} //== LG Break ---------------------

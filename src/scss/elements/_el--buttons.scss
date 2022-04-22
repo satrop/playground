@@ -1,0 +1,254 @@
+.button,
+.in-line-nav__trigger {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 16px 30px;
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    transition-property: color;
+    transition-duration: 0.3s;
+    border: 0;
+    cursor: pointer;
+
+    &::before {
+        @include pseudo;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        transform: scaleY(0);
+        transform-origin: 50% 100%;
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        border-color: $yellow;
+        outline: none;
+
+        &::before {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+    }
+
+    &--prime {
+        background-color: $prime-blue;
+        color: $white;
+
+        &::before {
+            background-color: $yellow;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $black;
+        }
+    }
+
+    &--secondary {
+        background-color: $yellow;
+        color: $black;
+
+        &::before {
+            background-color: $prime-blue;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $white;
+        }
+    }
+
+    &--ghost {
+        background-color: transparent;
+        border: solid 1px;
+        border-color: $prime-blue;
+        color: $prime-blue;
+
+        &::before {
+            background-color: $yellow;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $black;
+        }
+    }
+}
+
+.background-color {
+    &--prime-blue,
+    &--navy,
+    &--black {
+        .button,
+        .button--prime {
+            @extend %anim;
+            border-color: $white;
+            color: $white;
+            border: solid 1px;
+            background-color: transparent;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $yellow;
+                border-color: $yellow;
+                background-color: transparent;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            &--ghost {
+                border-color: $white;
+                color: $white;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $yellow;
+                    border-color: $yellow;
+                }
+            }
+        }
+
+        .background-color--cool-grey {
+            .button {
+                background-color: $prime-blue;
+                color: $white;
+
+                &::before {
+                    display: block;
+                    background-color: $yellow;
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $black;
+                }
+            }
+        }
+
+        .form-element--with-button {
+            .button,
+            .in-line-nav__trigger {
+                &--prime {
+                    background-color: $prime-blue;
+                    color: $white;
+
+                    &::before {
+                        background-color: $yellow;
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $black;
+                    }
+                }
+                &--ghost {
+                    background-color: transparent;
+                    border: solid 1px;
+                    border-color: $prime-blue;
+                    color: $prime-blue;
+
+                    &::before {
+                        @include pseudo;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: -1;
+                        transform: scaleY(0);
+                        transform-origin: 50% 100%;
+                        transition-property: transform;
+                        transition-duration: 0.3s;
+                        transition-timing-function: ease-out;
+                    }
+
+                    &::before {
+                        background-color: $yellow;
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        border-color: $yellow;
+                        outline: none;
+
+                        &::before {
+                            -webkit-transform: scaleY(1);
+                            transform: scaleY(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.background-color {
+    &--cool-grey,
+    &--yellow,
+    &--light-blue {
+        .button,
+        .button--prime {
+            background-color: $prime-blue;
+            color: $white;
+
+            &::before {
+                background-color: $yellow;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $black;
+            }
+
+            &::before {
+                @include pseudo;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                transform: scaleY(0);
+                transform-origin: 50% 100%;
+                transition-property: transform;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: red;
+                outline: none;
+
+                &::before {
+                    -webkit-transform: scaleY(1);
+                    transform: scaleY(1);
+                }
+            }
+        }
+    }
+}

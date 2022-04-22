@@ -1,0 +1,106 @@
+.pre-header {
+    @include toRem(font-size, 16);
+    @include toRem(line-height, 18);
+    font-family: "Vito-Bold";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.tray--text-header {
+    padding: 75px 0;
+
+    .button-row {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .button {
+            width: 100%;
+            text-align: center;
+
+            + .button {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &--title-header-block {
+        text-align: center;
+
+        .button-row {
+            margin-top: 48px;
+            justify-content: center;
+        }
+    }
+
+    &--cta-header-block {
+        text-align: center;
+        padding: 60px 0 136px 0;
+
+        .text-block {
+            display: block;
+            margin-top: 32px;
+
+            p:last-of-type {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--text-header {
+        padding: 105px 0 110px 0;
+
+        h1,
+        .h1 {
+            @include toRem(font-size, 60);
+            @include toRem(letter-spacing, -1);
+            @include toRem(line-height, 72);
+        }
+
+        .text-block {
+            margin-top: 0;
+        }
+
+        .button-row {
+            margin-top: 70px;
+
+            .button {
+                width: auto;
+
+                + .button {
+                    margin-left: 20px;
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &--title-header-block {
+            .button-row {
+                margin-top: 24px;
+            }
+        }
+
+        &--cta-header-block {
+            text-align: left;
+            padding: 97px 0 108px 0;
+
+            h1 + p {
+                margin-top: 16px;
+            }
+
+            .col-lg-8 {
+                padding-right: 55px;
+            }
+
+            .col-lg-3 {
+                padding-left: 15px;
+            }
+        }
+    }
+} //== LG Break ---------------------

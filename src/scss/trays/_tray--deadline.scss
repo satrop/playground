@@ -1,0 +1,31 @@
+.tray--deadline {
+    padding-top: 106px;
+    padding-bottom: 106px;
+
+    &__header {
+        text-align: center;
+
+        h2 {
+            margin-bottom: 24px;
+        }
+    }
+
+    .deadline-item-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% + 10px);
+        margin-left: -5px;
+        margin-top: 77px;
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--deadline {
+        .deadline-item-wrapper {
+            width: calc(100% + 60px);
+            margin-left: -30px;
+        }
+    }
+} //== LG Break ---------------------

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="53px" viewBox="0 0 59 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>astronomy</title>
+    <g id="Row-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Card-Row" transform="translate(-845.000000, -13936.000000)" stroke="#002868" stroke-width="3">
+            <g id="astronomy" transform="translate(847.000000, 13938.000000)">
+                <polyline id="Path" points="13.5427233 22.8058791 1.65774053 25.2797501 0 16.9203984 11.8849827 14.4455715"></polyline>
+                <polygon id="Rectangle" transform="translate(49.841439, 10.534677) rotate(-11.483000) translate(-49.841439, -10.534677) " points="46.6286938 0.437476876 53.0541848 0.437476876 53.0541848 20.6318771 46.6286938 20.6318771"></polygon>
+                <polyline id="Path" points="22.5567799 22.4928186 13.4018373 24.3769019 10.8341786 11.573721 45.1424109 4.51424109"></polyline>
+                <line x1="47.8509556" y1="18.0569644" x2="31.5996876" y2="20.765509" id="Path"></line>
+                <circle id="Oval" cx="27.9882948" cy="22.5712055" r="4.51424109"></circle>
+                <line x1="23.4740537" y1="32.5025358" x2="15.3484197" y2="48.7538038" id="Path"></line>
+                <line x1="28.891143" y1="27.9882948" x2="40.6281698" y2="48.7538038" id="Path"></line>
+            </g>
+        </g>
+    </g>
+</svg>

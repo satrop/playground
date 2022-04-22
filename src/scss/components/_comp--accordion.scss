@@ -1,0 +1,110 @@
+.tray--accordion {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    h2,
+    .h2 {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    width: 100%;
+
+    .accordion {
+        border-bottom: solid 1px $prime-blue;
+
+        &__button {
+            @include toRem(font-size, 24);
+            @include toRem(line-height, 32);
+            @include lora;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            height: 64px;
+            background-color: transparent;
+            padding: 0 16px;
+            position: relative;
+            border-top: solid 1px $prime-blue;
+            width: 100%;
+            cursor: pointer;
+            color: $black;
+
+            .icon--wrapper {
+                margin-left: auto;
+                position: relative;
+                width: 12px;
+                height: 12px;
+
+                .icon {
+                    @extend %anim;
+                    @include center;
+                }
+            }
+
+            &.active {
+                .icon--wrapper {
+                    .icon {
+                        &--expand-s {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__content {
+            @include toRem(font-size, 18);
+            padding-bottom: 16px;
+            padding-left: 16px;
+            padding-right: 16px;
+            @include toRem(line-height, 24);
+            display: none;
+
+            &.show {
+                display: block;
+            }
+
+            p:last-of-type {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.background-color {
+    &--prime-blue,
+    &--navy,
+    &--black .tray--accordion {
+        .accordion {
+            border-bottom: solid 1px $white;
+            &__button {
+                color: $white;
+                border-top: solid 1px $white;
+
+                svg.icon {
+                    fill: $white;
+                }
+            }
+        }
+    }
+}
+
+svg path {
+    fill: inherit;
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--accordion {
+        .accordion {
+            &__button {
+                padding: 0;
+            }
+            &__content {
+                padding-right: 100px;
+                padding-left: 0;
+            }
+        }
+    }
+} //== LG Break ---------------------

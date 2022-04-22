@@ -1,0 +1,235 @@
+$input-border: #010101;
+$input-border-invalad: #da1e28;
+
+.form-element {
+    margin-bottom: 20px;
+
+    label {
+        &:not(.image-selects) {
+            @extend %anim;
+            display: flex;
+            align-items: center;
+            border: solid 1px $input-border;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            height: 70px;
+            position: relative;
+
+            span {
+                @extend %anim;
+                z-index: 2;
+
+                &.move-up {
+                    margin-top: -40px;
+                    font-size: 0.7rem;
+                    opacity: 0.5;
+                }
+            }
+
+            input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+                background-color: $white;
+                padding-left: 20px;
+                padding-right: 20px;
+
+                &:focus {
+                    outline: solid 2px $prime-blue;
+                }
+            }
+
+            button {
+                margin-left: auto;
+            }
+        }
+
+        &.image-selects {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            input {
+                display: none;
+            }
+
+            svg {
+                position: absolute;
+            }
+
+            span {
+                margin-left: 32px;
+            }
+
+            input:checked {
+                + .icon {
+                    &--checkbox-s {
+                        opacity: 1;
+                    }
+
+                    &--radio-s {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .icon {
+                @extend %anim;
+
+                &--checkbox-s {
+                    opacity: 0;
+                }
+
+                &--radio-s {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &.invalad-input {
+            border-color: $input-border-invalad;
+        }
+    }
+
+    &--with-button {
+        label {
+            input {
+                padding-right: 167px;
+            }
+        }
+    }
+}
+
+// [class^="background-color--"]:not(.background-color--white, .background-color--cool-grey),
+// [class*="background-color--"]:not(.background-color--white, .background-color--cool-grey) {
+//     .form-element {
+//         label {
+//             border-color: $white;
+
+//             input {
+//                 color: $white;
+
+//                 &:focus {
+//                     outline: solid 2px $white;
+//                 }
+//             }
+
+//             button {
+//                 @extend %anim;
+//                 border: solid 1px $white;
+
+//                 &:hover,
+//                 &:focus {
+//                     border-color: $yellow;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.form-element--search {
+    display: flex;
+    background-color: $white;
+    padding: 13px;
+    margin-bottom: 0;
+
+    label:not(.image-selects) {
+        height: 50px;
+        margin-right: 30px;
+
+        span {
+            &.move-up {
+                margin-top: -30px;
+            }
+        }
+    }
+}
+
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+    width: 100%;
+    height: 70px;
+
+    select {
+        display: none;
+    }
+
+    .custom-select {
+        background-color: $white;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+
+        .custom-select-trigger {
+            @extend %anim;
+            display: flex;
+            align-items: center;
+            border: solid 1px $input-border;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            height: 70px;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                @extend %anim;
+                @include css-triangle($black, down, 10px);
+                right: 20px;
+            }
+        }
+
+        &.opened {
+            .custom-select-trigger:after {
+                transform: rotate(-180deg);
+            }
+
+            .custom-options {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .custom-options {
+        @extend %anim;
+        z-index: 2;
+        position: absolute;
+        display: block;
+        top: 100%;
+        left: 0;
+        right: 0;
+        min-width: 100%;
+        background: #ebebeb;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-15px);
+
+        .custom-option {
+            @extend %anim;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            height: 70px;
+            cursor: pointer;
+
+            &:hover,
+            &.selection {
+                background: $prime-blue;
+                color: #fff;
+            }
+        }
+    }
+}

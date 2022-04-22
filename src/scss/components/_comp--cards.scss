@@ -1,0 +1,120 @@
+.tray--comp-card {
+    padding: 70px 0;
+
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+.background-color {
+    &--prime-blue,
+    &--black,
+    &--navy {
+        .card-list {
+            .card {
+                &__kicker {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 10px);
+    margin-left: -5px;
+
+    .card {
+        flex: 1 1 100%;
+        margin-bottom: 60px;
+        display: none;
+
+        &__image-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 24px;
+
+            img {
+                object-fit: cover;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+            }
+        }
+
+        &__kicker {
+            text-transform: uppercase;
+            font-family: "Vito-Bold";
+            margin-bottom: 22px;
+            @include toRem(font-size, 16);
+            @include toRem(line-height, 18);
+            letter-spacing: 1px;
+            color: #010101;
+        }
+
+        h3,
+        .text-block {
+            margin-bottom: 24px;
+        }
+
+        &__icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 33px;
+
+            .icon-container {
+                width: 120px;
+                height: 120px;
+                background-color: $yellow;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 60px;
+            }
+        }
+    }
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 48px;
+
+    h2,
+    .h2 {
+        margin-bottom: 24px;
+    }
+}
+
+.button--show-less {
+    display: none;
+    margin-left: 30px;
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .card-wrapper {
+        width: calc(100% + 60px);
+        margin-left: -30px;
+
+        .card {
+            flex: 0 1 calc(33.333333% - 60px);
+            margin-left: 30px;
+            margin-right: 30px;
+
+            &:nth-child(3n) {
+                margin-bottom: 60px;
+            }
+        }
+    }
+} //== LG Break ---------------------

@@ -1,0 +1,63 @@
+.tray--hero {
+    &--alt {
+        padding-top: 30px;
+
+        .tray--hero__background {
+            min-height: 425px;
+        }
+
+        .hero-borders {
+            &::before {
+                height: 30px;
+                top: -30px;
+                left: 0;
+                width: 80%;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .tray--hero__background {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .hero--wavy {
+            width: 133px;
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include xl {
+    .tray--hero {
+        &--alt {
+            padding-top: 41px;
+            .tray--hero__background {
+                min-height: 465px;
+                width: calc(100% - 82px);
+                margin-left: 41px;
+            }
+
+            .hero-borders {
+                &::before {
+                    height: 506px;
+                    left: -41px;
+                    width: 90%;
+                    border-width: 41px 0 0 41px;
+                    top: -41px;
+                }
+
+                &::after {
+                    top: 161px;
+                    border-width: 0 41px 0 0;
+
+                    display: block;
+                }
+            }
+        }
+    }
+} //== XL Break ---------------------

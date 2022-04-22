@@ -1,0 +1,152 @@
+.in-line-nav {
+    &__trigger {
+        background-color: $yellow;
+        color: $prime-blue;
+        display: flex;
+        align-items: center;
+        text-indent: 20px;
+        cursor: pointer;
+        width: 100%;
+
+        &::before {
+            background-color: $prime-blue;
+        }
+
+        .mobile {
+            display: flex;
+
+            span {
+                margin-left: 10px;
+            }
+        }
+        .desktop {
+            display: none;
+        }
+
+        span {
+            align-items: center;
+        }
+
+        .icon {
+            width: 14px;
+            height: 15px;
+
+            &--close-s {
+                opacity: 0;
+            }
+
+            &--caret-s-s {
+                width: 16px;
+                height: 8px;
+            }
+        }
+
+        svg {
+            @extend %anim;
+            fill: $prime-blue;
+            position: absolute;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $white;
+
+            svg {
+                fill: $white;
+            }
+        }
+
+        &.active {
+            color: $white;
+
+            svg {
+                fill: $white;
+            }
+
+            .icon {
+                &--close-s {
+                    opacity: 1;
+                }
+
+                &--hamburger-s {
+                    opacity: 0;
+                }
+            }
+
+            .mobile {
+                .icon--caret-s-s {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+        position: relative;
+        z-index: 100;
+
+        ul {
+            padding: 22px 25px 37px 27px;
+            margin: 0;
+            width: 100%;
+            list-style: none;
+
+            li {
+                width: auto;
+                @include toRem(font-size, 14);
+
+                a {
+                    position: relative;
+
+                    &::after {
+                        @extend %anim;
+                        content: "";
+                        position: absolute;
+                        bottom: -8px;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: rgba($white, 0) !important;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: $white;
+
+                        &::after {
+                            background-color: rgba($white, 1) !important;
+                            bottom: -4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .in-line-nav {
+        &__trigger {
+            width: auto;
+
+            .mobile {
+                display: none;
+            }
+            .desktop {
+                display: flex;
+            }
+        }
+
+        &__nav {
+            position: absolute;
+
+            ul {
+                padding: 24px 200px 37px 49px;
+            }
+        }
+    }
+} //== LG Break ---------------------

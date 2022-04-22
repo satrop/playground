@@ -1,0 +1,79 @@
+.footer-container ul.social-links {
+    padding: 0 0 48px 0;
+}
+
+.social-links {
+    display: flex;
+    padding: 0 0 48px 0;
+    margin-top: 49px;
+    border-bottom: 1px solid $white;
+
+    li {
+        margin-right: 30px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    .svg-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+
+        .icon {
+            &--youtube {
+                width: 30px;
+                height: 21px;
+            }
+
+            &--twitter {
+                width: 30px;
+                height: 25px;
+            }
+
+            &--linkedin {
+                width: 29px;
+                height: 29px;
+            }
+
+            &--facebook,
+            &--insta {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    a {
+        svg {
+            @extend %anim;
+        }
+
+        &:hover {
+            svg {
+                fill: $yellow;
+            }
+        }
+    }
+}
+
+.background-color {
+    &--prime-blue,
+    &--navy,
+    &--black {
+        svg.icon {
+            fill: $white;
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .footer-container ul.social-links {
+        padding: 0;
+    }
+} //== LG Break ---------------------

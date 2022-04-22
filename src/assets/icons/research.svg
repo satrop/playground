@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="48px" viewBox="0 0 42 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>research</title>
+    <g id="Row-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Card-Row" transform="translate(-1096.000000, -597.000000)" stroke="#002868" stroke-width="3">
+            <g id="research" transform="translate(1098.000000, 599.000000)">
+                <polyline id="Path" points="24 0 24 12 36 12"></polyline>
+                <polyline id="Path" points="36 22 36 12 24 0 0 0 0 44 23 44"></polyline>
+                <line x1="8" y1="34" x2="13" y2="34" id="Path"></line>
+                <line x1="8" y1="24" x2="16" y2="24" id="Path"></line>
+                <line x1="8" y1="14" x2="16" y2="14" id="Path"></line>
+                <line x1="38" y1="42" x2="31.949" y2="35.949" id="Path"></line>
+                <circle id="Oval" cx="27" cy="31" r="7"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

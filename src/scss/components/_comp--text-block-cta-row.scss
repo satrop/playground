@@ -1,0 +1,45 @@
+.tray--text-block-cta {
+    padding: 75px 0;
+
+    .button-row {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 48px;
+
+        .button {
+            margin-bottom: 20px;
+
+            &:last-ot-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .text-block {
+        margin-top: 32px;
+
+        p:last-of-type {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--text-block-cta {
+        padding: 125px 0;
+
+        .button-row {
+            margin-top: 0;
+        }
+    }
+
+    .tray--text-header--cta-header-block {
+        .button-row {
+            margin-top: 30px;
+        }
+    }
+} //== LG Break ---------------------

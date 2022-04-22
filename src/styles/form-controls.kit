@@ -1,0 +1,151 @@
+<!-- @page_name: Whitman - Form Controls -->
+<!-- @body_class: nil -->
+<!-- @path_css: ../assets/css/ -->
+<!-- @path_img: ../assets/ -->
+<!-- @path_js: ../assets/js/ -->
+<!-- @path_home: ../ -->
+<!-- @import '../pars/template/open' -->
+<!-- @import '../pars/template/top-bar' -->
+<!-- @import '../pars/template/main-nav' -->
+<style>
+    section {
+        border-bottom: 1px solid #eff2f9;
+        padding: 30px 0;
+        margin-bottom: 30px;
+    }
+</style>
+
+<main id="main">
+    <div style="height: 50px;"></div>
+
+    <div class="tray">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Form Controls</h1>
+                    <div style="height: 50px;"></div>
+                    <section>
+                        <h2>Inputs</h2>
+                        <form action="#">
+                            <div class="form-element">
+                                <label>
+                                    <span>Text Input</span>
+                                    <input type="text" data-lpignore="true">
+                                </label>
+                            </div>
+                            <div class="form-element">
+                                <label>
+                                    <span>Phone Input</span>
+                                    <input type="tel" data-lpignore="true">
+                                </label>
+                            </div>
+                            <div class="form-element">
+                                <label>
+                                    <span>Email Input</span>
+                                    <input type="email" data-lpignore="true">
+                                </label>
+                            </div>
+                            <div class="form-element form-element--with-button">
+                                <label>
+                                    <span>Text Input with Button</span>
+                                    <input type="text" data-lpignore="true">
+                                    <button type="submit" class="button button--prime">Submit</button>
+                                </label>
+                            </div>
+                            <div class="background-color--prime-blue" style="padding: 20px 20px 1px 20px; margin-bottom: 20px;">
+                                <div class="form-element form-element--with-button">
+                                    <label>
+                                        <span>Text Input with Button</span>
+                                        <input type="text" data-lpignore="true">
+                                        <button type="submit" class="button button--ghost">Submit</button>
+                                    </label>
+                                </div>
+                            </div>
+                            <h2>Dropdown</h2>
+                            <div class="form-element">
+                                <select name="sources" id="sources" class="custom-select sources" placeholder="Label">
+                                    <option value="Label One">Label One</option>
+                                    <option value="Label Two">Label Two</option>
+                                    <option value="Label Three">Label Three</option>
+                                </select>
+                            </div>
+                            <h2>Checkbox Buttons</h2>
+                            <div class="form-element">
+                                <label class="image-selects">
+                                    <svg class="icon icon--checkbox icon--checkbox-d">
+                                        <use xlink:href="#checkbox-d" />
+                                    </svg>
+                                    <input type="checkbox" class="checkbox" checked>
+                                    <svg class="icon icon--checkbox icon--checkbox-s">
+                                        <use xlink:href="#checkbox-s" />
+                                    </svg>
+                                    <span>Checkbox Item One</span>
+                                </label>
+                            </div>
+                            <div class="form-element">
+                                <label class="image-selects">
+                                    <svg class="icon icon--checkbox icon--checkbox-d">
+                                        <use xlink:href="#checkbox-d" />
+                                    </svg>
+                                    <input type="checkbox" class="checkbox">
+                                    <svg class="icon icon--checkbox icon--checkbox-s">
+                                        <use xlink:href="#checkbox-s" />
+                                    </svg>
+                                    <span>Checkbox Item Two</span>
+                                </label>
+                            </div>
+                            <h2>Radio Buttons</h2>
+                            <div class="form-element">
+                                <label class="image-selects">
+                                    <svg class="icon icon--radio icon--radio-d">
+                                        <use xlink:href="#radio-d" />
+                                    </svg>
+                                    <input type="radio" class="radio" name="radio-group-1">
+                                    <svg class="icon icon--radio icon--radio-s">
+                                        <use xlink:href="#radio-s" />
+                                    </svg>
+                                    <span>Checkbox Item One</span>
+                                </label>
+                            </div>
+                            <div class="form-element">
+                                <label class="image-selects">
+                                    <svg class="icon icon--radio icon--radio-d">
+                                        <use xlink:href="#radio-d" />
+                                    </svg>
+                                    <input type="radio" class="radio" name="radio-group-1" checked>
+                                    <svg class="icon icon--radio icon--radio-s">
+                                        <use xlink:href="#radio-s" />
+                                    </svg>
+                                    <span>Checkbox Item Two</span>
+                                </label>
+                            </div>
+                            <div class="form-element">
+                                <label class="image-selects">
+                                    <svg class="icon icon--radio icon--radio-d">
+                                        <use xlink:href="#radio-d" />
+                                    </svg>
+                                    <input type="radio" class="radio" name="radio-group-1">
+                                    <svg class="icon icon--radio icon--radio-s">
+                                        <use xlink:href="#radio-s" />
+                                    </svg>
+                                    <span>Checkbox Item Three</span>
+                                </label>
+                            </div>
+                            <h2>Validation</h2>
+                            <div class="form-element">
+                                <label class="invalad-input">
+                                    <span>Text Input</span>
+                                    <input type="text" data-lpignore="true">
+                                </label>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<!-- @import '../pars/template/footer' -->
+<!-- @import "../pars/template/icons" -->
+<!-- @import '../pars/template/close' -->

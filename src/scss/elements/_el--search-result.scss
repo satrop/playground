@@ -1,0 +1,93 @@
+.search-result__item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid $navy;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &_image {
+        flex: 1 1 100%;
+        margin-bottom: 30px;
+    }
+
+    &_text-block {
+        flex: 1 1 100%;
+
+        .text-block {
+            &__date {
+                @include toRem(font-size, 18);
+                @include toRem(line-height, 24);
+                letter-spacing: 2.4px;
+                text-transform: uppercase;
+                margin-bottom: 14px;
+            }
+
+            &__header {
+                @include toRem(font-size, 24);
+                @include toRem(line-height, 32);
+                margin-bottom: 16px;
+            }
+
+            &__extract {
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+.search-page {
+    .search-result__item {
+        border-bottom-width: 1px;
+
+        &_text-block {
+            .text-block__header {
+                font-family: "Lora", serif;
+                font-weight: 800;
+
+                &.link {
+                    box-shadow: 0 5px 0 $white, 0 6px 0 $white;
+
+                    &:hover,
+                    &:focus {
+                        color: $black;
+                        box-shadow: 0 1px 0 $white, 0 3px 0 $yellow;
+                    }
+                }
+            }
+        }
+    }
+
+    .form-element--search {
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 48px;
+
+        label {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .search-result__item {
+        flex-direction: row;
+
+        &_image {
+            flex-basis: 50%;
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+    }
+
+    .search-page {
+        .form-element--search {
+            flex-direction: row;
+
+            label {
+                margin-bottom: 0;
+            }
+        }
+    }
+} //== LG Break ---------------------

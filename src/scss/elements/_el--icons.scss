@@ -1,0 +1,136 @@
+.icon {
+    width: 24px;
+    height: 24px;
+
+    &--button,
+    &--expanding-oop {
+        width: 55px;
+        height: 55px;
+    }
+
+    &--checkbox,
+    &--radio {
+        width: 26px;
+        height: 26px;
+    }
+
+    &--account,
+    &--search,
+    &--tools {
+        width: 16px;
+        height: 16px;
+    }
+
+    &--caret-large {
+        width: 67px;
+        height: 44px;
+    }
+
+    &--growing-talent {
+        width: 56px;
+        height: 49px;
+    }
+
+    &--small-carret-s {
+        width: 14px;
+        height: 7.5px;
+    }
+
+    &--expand,
+    &--collapse {
+        &-s {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    &--caret-large {
+        width: 67px;
+        height: 44px;
+    }
+
+    &--carret-filled {
+        width: 20px;
+        height: 13px;
+    }
+
+    &--carret {
+        &-n,
+        &-s {
+            width: 24px;
+            height: 14px;
+        }
+
+        &-e,
+        &-w {
+            width: 14px;
+            height: 24px;
+        }
+    }
+
+    &--close-s {
+        width: 14px;
+        height: 14px;
+    }
+
+    &--caret-s-s {
+        width: 16px;
+        height: 7.58px;
+    }
+
+    &--facebook,
+    &--insta,
+    &--twitter,
+    &--youtube {
+        width: 48px;
+        height: 48px;
+    }
+
+    &--linkedin {
+        width: 45px;
+        height: 45px;
+    }
+
+    &--caret-s-e {
+        width: 5px;
+        height: 7px;
+    }
+
+    &--video {
+        width: 101px;
+        height: 101px;
+    }
+}
+
+svg.icon {
+    fill: $black;
+
+    &--caret-large {
+        fill: transparent;
+    }
+}
+
+#checkbox-d,
+#checkbox-s,
+#radio-d {
+    g,
+    rect {
+        stroke: $black;
+    }
+}
+
+#radio-s {
+    rect#rect-1 {
+        fill: $black;
+    }
+
+    rect#rect-2 {
+        stroke: $black;
+    }
+}
+
+[class^="background-color--"] {
+    svg.icon {
+        fill: $white;
+    }
+}

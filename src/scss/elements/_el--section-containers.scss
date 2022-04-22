@@ -1,0 +1,24 @@
+.section-container {
+    &--wavy {
+        background-size: auto;
+        background-position: center;
+
+        &--lg {
+            background-image: url("../img/wavy--xxl.svg");
+            background-size: auto;
+            background-position: center;
+        }
+
+        &--md {
+            background-image: url("../img/wavy--xxl.svg");
+            background-size: auto;
+            background-position: center;
+        }
+
+        &--sm {
+            background-image: url("../img/wavy--xxl.svg");
+            background-size: auto;
+            background-position: center;
+        }
+    }
+}

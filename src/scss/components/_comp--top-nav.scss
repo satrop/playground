@@ -1,0 +1,380 @@
+.top-bar-outter {
+    overflow-x: hidden;
+}
+
+.top-bar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 0 0 0;
+
+    .home-link {
+        display: block;
+        width: 230px;
+    }
+
+    .section {
+        width: 100%;
+        display: flex;
+        margin-top: 15px;
+    }
+
+    .top-links {
+        display: none;
+    }
+
+    .button-links {
+        display: flex;
+        flex: 1 0 calc(100% + 70px);
+        margin-left: -35px;
+        justify-content: space-between;
+        background-color: $navy;
+        padding: 25px 45px;
+        position: relative;
+        z-index: 2;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            height: 100%;
+            width: 200vw;
+            background-color: inherit;
+            z-index: -1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: calc(100% - 80px);
+            height: 1px;
+            background-color: $prime-blue;
+        }
+
+        button {
+            background-color: transparent;
+
+            svg.icon {
+                fill: $white;
+            }
+
+            &::after {
+                @extend %anim;
+            }
+        }
+    }
+}
+
+#main-site-search {
+    display: flex;
+    display: none;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: $navy;
+    padding-left: 30px;
+
+    .form-element {
+        width: 90%;
+
+        label:not(.image-selects) {
+            height: 50px;
+
+            input {
+                background-color: $white;
+                color: $black;
+            }
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 16px 30px;
+        }
+    }
+}
+
+.main-nav-toggle {
+    padding: 0;
+    background-color: transparent;
+    margin-left: auto;
+    position: relative;
+    width: 24px;
+    height: 24px;
+
+    .icon {
+        @extend %anim;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+
+        &--hamburger {
+            opacity: 1;
+        }
+
+        &--close {
+            opacity: 0;
+        }
+    }
+
+    &.active {
+        .icon {
+            &--hamburger {
+                opacity: 0;
+            }
+
+            &--close {
+                opacity: 1;
+            }
+        }
+    }
+
+    svg {
+        fill: $white;
+    }
+}
+
+.tools-dropdown {
+    display: none;
+}
+
+.top-bar {
+    .section {
+        ul {
+            li {
+                a {
+                    @extend %anim;
+
+                    &::after {
+                        @extend %anim;
+                    }
+                }
+
+                &.icons {
+                    button {
+                        padding: 0;
+                        margin: 0;
+                        background-color: transparent;
+                        border: 0;
+                    }
+                    &::after {
+                        @extend %anim;
+                    }
+                }
+                svg {
+                    @extend %anim;
+                    fill: $white;
+                }
+            }
+        }
+    }
+}
+
+ul.tools-dropdown {
+    li {
+        @extend %anim;
+        a {
+            @extend %anim;
+        }
+    }
+}
+
+.featured-block {
+    display: none;
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include md {
+    #main-site-search {
+        .form-element {
+            width: 761px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 13px;
+            background-color: $white;
+            display: flex;
+
+            label {
+                border-color: #010101;
+
+                input {
+                    &:focus {
+                        outline: solid 2px #002868;
+                    }
+                }
+            }
+
+            button {
+                margin-top: 0;
+                width: auto;
+                margin-left: 30px;
+            }
+        }
+    }
+} //== MD Break ---------------------
+
+@include lg {
+    .main-nav-toggle {
+        display: none;
+    }
+
+    .top-bar-outter {
+        overflow-x: unset;
+    }
+
+    .top-bar {
+        flex-direction: row;
+        height: 70px;
+        padding: 0;
+        align-content: center;
+        flex-wrap: nowrap;
+
+        .home-link {
+            flex-shrink: 0;
+            width: 300px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section {
+            align-items: center;
+
+            ul {
+                margin-bottom: 0;
+                margin-left: auto;
+
+                li {
+                    list-style: none;
+                    padding-left: 14px;
+                    padding-right: 14px;
+
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                        position: relative;
+                        font-size: 0.875rem;
+                        letter-spacing: 0.05rem;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: 0;
+                            background-color: #ffc627;
+                            bottom: -23px;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            color: $yellow;
+
+                            &::after {
+                                height: 4px;
+                            }
+                        }
+                    }
+
+                    svg {
+                        fill: $white;
+                        cursor: pointer;
+                        position: relative;
+
+                        &:hover,
+                        &:focus-within {
+                            fill: $yellow;
+
+                            &::after {
+                                height: 4px;
+                            }
+                        }
+                    }
+
+                    &.icons {
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            height: 0;
+                            background-color: #ffc627;
+                            bottom: -21px;
+                            left: 50%;
+                            margin-left: 2px;
+                            transform: translateX(-50%);
+                        }
+
+                        &:hover,
+                        &.active,
+                        &:focus-within {
+                            svg {
+                                fill: $yellow;
+                            }
+                            &::after {
+                                height: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .top-links {
+            display: flex;
+        }
+
+        ul.tools-dropdown {
+            position: absolute;
+            display: none;
+            background-color: $yellow;
+            width: 270px;
+            padding: 27px 32px;
+            right: -20px;
+            top: 41px;
+            z-index: 200;
+
+            li {
+                &.header {
+                    font-family: "Vito-Bold";
+                    color: $black;
+                }
+                a {
+                    color: $black;
+                    line-height: 30px;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                &:hover:not(.header) {
+                    background-color: $white;
+
+                    a {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+
+    #main-site-search {
+        padding: 0;
+        background-color: $prime-blue;
+        height: 366px;
+
+        .form-element {
+            margin-bottom: 0;
+        }
+    }
+} //== LG Break ---------------------

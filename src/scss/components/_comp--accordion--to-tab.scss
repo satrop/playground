@@ -1,0 +1,54 @@
+.tray--accordion--to-tab {
+    .accordion {
+        .button-row {
+            display: none;
+
+            button {
+                @extend %anim;
+            }
+        }
+    }
+}
+
+//== Breaks --------------------------------------------------------------------------
+//==----------------------------------------------------------------------------------
+@include lg {
+    .tray--accordion--to-tab {
+        .accordion {
+            border-bottom: 0;
+            .button-row {
+                display: flex;
+                border-bottom: 1px solid $yellow;
+                height: 48px;
+                justify-content: space-around;
+                margin-bottom: 40px;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex: 1 1 auto;
+                    background-color: transparent;
+                    font-family: "Lora", serif;
+                    font-weight: 500;
+                    color: $prime-blue;
+                    cursor: pointer;
+
+                    &:not(.inactive) {
+                        background-color: $yellow;
+                    }
+
+                    &:hover {
+                        background-color: $yellow;
+                    }
+                }
+            }
+            &__button {
+                display: none;
+            }
+            &__content {
+                padding: 0;
+            }
+        }
+    }
+} //== LG Break ---------------------
